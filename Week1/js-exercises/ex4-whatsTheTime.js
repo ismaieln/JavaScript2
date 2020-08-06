@@ -10,9 +10,21 @@
   4. Have the function execute when it 's loading in the browser
 
  */
+// create h1
+let clock = document.createElement('h1');
+clock.style.fontFamily = 'Arial, sans-serif';
+clock.style.textAlign = 'center';
 
+// insert h1 in the document
+document.body.appendChild(clock);
+
+// the function of setting time
 function displayCurrentTime() {
   // your code goes in here
+  let timeNew = new Date();
+  let seet = timeNew.toLocaleTimeString('en-uk');
+  clock.innerText = seet;
 }
 
+// call the function every second
 setInterval(displayCurrentTime, 1000);
