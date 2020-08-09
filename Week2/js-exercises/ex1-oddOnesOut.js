@@ -20,6 +20,6 @@
 const myNumbers = [1, 2, 3, 4];
 console.log(doubleEvenNumbers(myNumbers)); // Logs "[4, 8]" to the console
 function doubleEvenNumbers(myNumbers) {
-  let newNumbers = myNumbers.filter((num) => num % 2 != 0).map((num) => num * 2);
+  let newNumbers = myNumbers.filter((num) => !(num % 2)).map((num) => num * 2);
   return newNumbers;
 }
