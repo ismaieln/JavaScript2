@@ -7,7 +7,6 @@
  Use the map and / or forEach function to put each hobby into a list item
  Put the list items in an unordered list
  */
-// window.addEventListener('load');
 
 function createHTMLList(arr) {
   // your code goes in here
