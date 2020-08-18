@@ -6,15 +6,19 @@ Declare a function called `createBase`.The function takes a number as a paramete
 return a closure, that adds a number to the base number argument.
 
 Call the function three times. The return values should be:
- 15, 24,  36
+ 15, 24,  33
 
  */
 
-function createBase( /* ???? */ ) {
+function createBase(num) {
   // Put here your logic...
+
+  return () => i * num * num + 6;
 }
 
-const addSix = createBase(6);
-
+let b = 3;
+const addSix = createBase(b);
 // Put here your function calls...
-console.log(addSix());
+for (i = 1; i <= b; i++) {
+  console.log(addSix(i));
+}
