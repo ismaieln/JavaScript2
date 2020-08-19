@@ -16,9 +16,12 @@ function f1(val) {
 }
 f1(x);
 console.log(x);
+/*the output will be 9
+the function f1 called but not used and we are logging the x which is global scop.
+but if we do let x=f1(x); then the output will be 10.*/
 
 const y = {
-  x: 9
+  x: 9,
 };
 
 function f2(val) {

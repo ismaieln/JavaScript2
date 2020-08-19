@@ -16,10 +16,24 @@ function removeDuplicates(arr) {
   return char;
 }
 const letters = ['a', 'b', 'c', 'd', 'a', 'e', 'f', 'c', 'b'];
-
 let letter = removeDuplicates(letters);
-if (letter.every((element, i) => element === ['a', 'b', 'c', 'd', 'e', 'f'][i])) {
+if (letter == ['a', 'b', 'c', 'd', 'e', 'f'] + []) {
   console.log('Hooray!');
 }
 
+// let letter = removeDuplicates(letters);
+// if (letter.every((element, i) => element === ['a', 'b', 'c', 'd', 'e', 'f'][i])) {
+//   console.log('Hooray!');
+// }
+
 // if (JSON.stringify(letter) === JSON.stringify(['a', 'b', 'c', 'd', 'e', 'f']))
+
+// function removeDuplicates(arr) {
+//   return [...new Set(arr)];
+// }
+// const letters = ['a', 'b', 'c', 'd', 'a', 'e', 'f', 'c', 'b'];
+
+// let letter = removeDuplicates(letters);
+// if (letter == ['a', 'b', 'c', 'd', 'e', 'f'] + []) {
+//   console.log('Hooray!');
+// }
