@@ -30,3 +30,7 @@ function f2(val) {
 }
 f2(y);
 console.log(y);
+/* x eill be 10
+here we log the y so, we call the function before we log the y,
+the function return the value of x as 10, then the out put will be 10.
+if we log y before calling the function then the output will be 9.*/
