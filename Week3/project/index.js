@@ -13,7 +13,8 @@ const people = document.getElementById('people');
 calculate.addEventListener('click', calculateTheTip);
 
 //to keep the number of sharing people one or more//
-sharing.addEventListener('change', changeTheLabel);
+sharing.addEventListener('change', changeTheValueShiring);
+bill.addEventListener('change', changeTheValueBill);
 
 function calculateTheTip() {
   if (bill.value == ' ' || service.value == 0) {
@@ -24,14 +25,24 @@ function calculateTheTip() {
     tip.style.display = 'block';
   }
 }
-function changeTheLabel() {
+
+// if the sharing people less than one
+function changeTheValueShiring() {
   if (sharing.value <= 0) {
-    alert('Please enter a valid number');
-    sharing.value = 1;
+    alert('Please enter a valid number of people');
+    sharing.value = sharing.min;
   }
   if (sharing.value == 1) {
     people.innerText = 'person';
   } else {
     people.innerText = 'people';
+  }
+}
+
+// if the entered amount less than zero
+function changeTheValueBill() {
+  if (bill.value < 0) {
+    alert('Please enter a positive amount');
+    bill.value = bill.min;
   }
 }
